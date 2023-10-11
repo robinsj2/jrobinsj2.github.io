@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reggie's Cofee Shop - Home</title>
+    <title>Reggie's Coffee Shop - Home</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -15,7 +14,7 @@
         <h1>Reggie's Coffee Shop</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="current">Home</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -24,7 +23,7 @@
     <!-- Starting main content of the page -->
     <main>
         <!-- adding an on page link -->
-        <a href="#treatoftheweek">Treat of the Week</a>
+        <a href="#treatoftheweek" class="blue-link">Treat of the Week</a>
         <!-- article of the page. Can be used as stand-alone -->
         <article>
             <h2>Our Story</h2>
@@ -35,7 +34,7 @@
                 and head barista of the shop. Maria is the pastry chef and is in-charge of the bake shop. Celebrating
                 their 10<sup>th</sup> anniversary together in March 2023.
             </p>
-            <blockquote>
+            <blockquote class="large-text">
                 We love all things coffee! <cite>- Reggie and Maria</cite>
             </blockquote>
             <hr>
@@ -65,8 +64,8 @@
         </section>
         <!-- Adding section for description list -->
         <section id="treatoftheweek">
-            <h3>Treat of the Week</h3>
-            <dl>
+            <h3 class="white-text">Treat of the Week</h3>
+            <dl class="white-text">
                 <dt>Name</dt>
                 <dd>Banana Bread</dd>
                 <dt>Calories</dt>
@@ -92,7 +91,7 @@
         <section>
             <!-- adding a section for Menu Table -->
             <h3>Menu Specials</h3>
-            <table border>
+            <table>
                 <thead>
                     <tr>
                         <th colspan="2">Items</th>
@@ -119,7 +118,7 @@
         </section>
     </main>
     <!-- Site footer -->
-    <footer>
+    <footer class="site-footer">
         <!-- special symbols for HTML can be found by googling HTML entities -->
         Copyright &copy; Reggie's Coffee Shop, 2023
     </footer>
