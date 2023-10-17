@@ -1,11 +1,11 @@
 /* 
 This is a CSS comment
-Shortcut for adding the comment is command/ctrl + /
+Shortcut for adding a comment is control/cmnd + /
 */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color:darkslategray;  
+    color: darkslategray;
 }
 
 h1 {
@@ -21,26 +21,23 @@ h1, h2, h3, h4 {
     text-decoration: underline;
 }
 
-/* selecting child elements */
-/* remove the bullets from the nav but keep bullets on merch and ingredients */
-
+/* Selecting child elements */
 nav ul {
     list-style: none;
 }
 
-/* Selecting child elements mulitple levels */
 nav ul a {
     color: darkslategray;
     text-decoration: none;
 }
+
 /* Selecting element with ID value */
-/* As a best practice, avoid using ID for styles */
+/* As a best practice, avoid using IDs for styles */
 #treatoftheweek {
     background-color: cadetblue;
-    font-size: 64px;
 }
 
-/* Selecting HTML elements with class name */
+
 .blue-link {
     background-color: darkslategray;
     color: antiquewhite;
@@ -56,42 +53,40 @@ nav ul a {
 }
 
 /* Combinators */
-/* Direct child selector - will only select direct child of the parent */
+/* direct child selector - will only select the direct child of the parent */
 article>p {
     font-size: 24px;
 }
 
-/* Adjacent sibling selector - selects the element that is the very next sibling to the selected element, IF any exist */
+/* Adjacent sibling selector - selects the element that is the very next sibling to the selected element, if any exist */
 h3+ul {
     border: 1px solid black;
 }
 
-/* Sibling selector */
+/* Sibling Selector */
 h3~p {
     text-transform: uppercase;
 }
 
 /* Attribute Selector */
-[href="#treatoftheweek"] {
+[href="treatoftheweek"] {
     font-weight: bold;
 }
 
 [src$=".jpg"] {
-    border: 4px solid darkslategray;
+    border: 8px solid darkslategray;
 }
 
-/* psuedo classes */
+/* Using Psuedo classes */
 /* Styling the navigation */
 nav ul a,
 nav ul a:link,
 nav ul a:visited {
     background-color: antiquewhite;
     /* horizontal, vertical, blur, spread, color */
-    box-shadow: -2px 2px 4px 2px #000;
+    box-shadow: -2px 2px 4px 2px black;
 }
-
-/* add class of current to HTML home link after adding hover and focus */
-nav ul .current,
+nav ul .current, 
 nav ul a:hover,
 nav ul a:focus {
     text-decoration: underline;
@@ -101,7 +96,8 @@ nav ul a:active {
     box-shadow: 0 0 4px 2px black;
 }
 
-/* first child and last child */
+/* Position selectors */
+/* first-child and last-child */
 aside ul li:first-child {
     font-weight: bold;
 }
@@ -110,51 +106,49 @@ section ol li:last-child {
     font-weight: bold;
 }
 
-/* styling a table */
+/* styling the table */
 table {
     border-collapse: collapse;
 }
 
-/* nth-child selectors - even/odd */
+/* nth-child selector - even/odd*/
 tbody tr:nth-child(even) {
+    /* hex color value with 6 characters */
     background-color: #d5836c;
 }
 
-/* Using the nth-child with n */
-/* where n is 0,1,2,3 until the number of elements end */
 table th:nth-child(n),
 table td:nth-child(n) {
-    border: 1px solid black;
+    border: 1px solid #000;
 }
 
-/* Using a formula in nth-child selectors */
-/* 1,3,5,7 */
+/* using formula in nth-child selector */
 table td:nth-child(2n+1) {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* CSS Specificity */
-/* formula: inline style, ID, class, tag-name */
-/*                0        0     0      0     */
+/* Specificity */
+/* formula: inline style, ID, Class, Tag-name */
+/*                0        0     0       0        */
 /* 0001 */
 footer {
     background-color: aqua;
 }
+/* 0012 */
+body footer.site-footer {
+   background-color: hotpink; 
+}
 /* 0002 */
 body footer {
-    background-color: red;
-}
-/* 0002 */
-article h2 {
-    text-transform: lowercase;
+    background-color: orange;
 }
 
-/* 0011 */
-footer.site-footer {
-    background-color: antiquewhite;
+footer {
+    background-color: red;
 }
-/* 0100 */
-#treatoftheweek {
-    font-size: 24px;
-    
-}
+
+
+
+
+
+
