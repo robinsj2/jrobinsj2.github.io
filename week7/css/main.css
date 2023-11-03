@@ -1,3 +1,5 @@
+
+
 /* 
 This is a CSS comment
 Shortcut for adding a comment is control/cmnd + /
@@ -6,31 +8,32 @@ Shortcut for adding a comment is control/cmnd + /
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: darkslategray;
+    /* Adding a background image */
     background-image: url(../images/white_brick_wall.png);
 }
-/* Box model example */
+/* box model example */
 section p {
     width: 50%;
-    /* single value = top/bottom/left/right */
-    /* 2 values = first value =top/bottom, second value = left/right */
-    padding: 5em .5em;
-    /* top right bottom left */
+    /* 2 values = first value-top/bottom | second value - left/right */
+    padding: 1rem .5rem;
+    /* 4 value = top bottom left right */
     margin: -1em 2em 2em 2em;
-    
+    border-bottom: 2px solid black;
 }
 
 .container {
-    /* create a container containing everything inside the body tag */
     max-width: 1200px;
-    margin: 0 auto;
+    margin:0 auto;
 }
 
 img {
-    width:100%;
+    width: 100%;
 }
+
 
 h1 {
     color: cadetblue;
+    
 }
 
 p {
@@ -55,69 +58,73 @@ nav ul li {
 }
 
 nav ul a {
-    display: block;
     color: darkslategray;
     text-decoration: none;
+    font-size: 1.5rem;
+    /* 1.5rem (html font size) = 16px * 1.5 = 24px */
+    display: block;
 }
 
 /* Selecting element with ID value */
 /* As a best practice, avoid using IDs for styles */
 #treatoftheweek {
+    /* background-color: cadetblue; */
     /* color image repeat position-x position-y */
     background: cadetblue url(../images/bread.jpg) no-repeat center;
-    /* background-size  */
-    background-size: cover;
+    background-size:cover;
     font-size: 1.25rem;
-    /* 16px * 1.25 = 20px */
-    /* padding pushes the element away from the walls */
+    /* 1.25 * 16px = 20px */
     padding: 1em;
-    /* 1em * 20px(element font size) = 20px */
+    /* 1 * 20px (element font size) = 20px */
+    /* viewport based units */
+    /* width: 100vw; */
     width: 50%;
-    /* height is 100% of the browser size and it is dynamic */
-    /* height: 100vh; */
-
+    /* position relative */
     position: relative;
     padding: 1em 1em 4em 1em;
+
 }
 
-/* Position Absolute */
+/* Absolute Position */
 .blue-link.large-text {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right:0;
 }
 
 .blue-link {
-    padding: 1.5em;
-    width: 300px;
-    display: block;
     background-color: darkslategray;
     color: antiquewhite;
     text-decoration: none;
+    /* em=1.5Xfont size */
+    padding: 1.5em;
+    width: 300px;
+    display: block;
 }
 
 .large-text {
     font-size: 24px;
+    line-height: 1.5em;
 }
 
-/* Example of Float */
+/* Example of Float layout */
 article,
 aside {
     width: 80%;
     background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid black;
-    padding: 1.5rem;
+    padding: 1.5em;
     box-sizing: border-box;
-    float: left;
+    float: left;    
 }
 
 aside {
     width: 20%;
 }
-/* clear float from the section */
+
 section {
-    clear: both;
+    clear:both;
 }
+
 .white-text {
     color: antiquewhite;
 }
@@ -126,8 +133,6 @@ section {
 /* direct child selector - will only select the direct child of the parent */
 article>p {
     font-size: 24px;
-
-    /* CSS typography properties */
     font-weight: bold;
     line-height: 1.5;
     text-transform: lowercase;
@@ -157,10 +162,11 @@ h3~p {
 /* fixed navigation */
 nav {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
 }
 
 /* Using Psuedo classes */
@@ -232,8 +238,6 @@ body footer {
 footer {
     background-color: red;
 }
-
-
 
 
 
