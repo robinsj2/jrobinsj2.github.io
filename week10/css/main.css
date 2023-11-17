@@ -134,6 +134,7 @@
  .actions-list {
    display: flex;
    flex-flow: row wrap;
+   
  }
 
  .actions-list li {
